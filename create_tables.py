@@ -34,6 +34,7 @@ def drop_tables(cur, conn):
     for query in drop_table_queries:
         cur.execute(query)
         conn.commit()
+        
 
 
 def create_tables(cur, conn):
@@ -43,8 +44,10 @@ def create_tables(cur, conn):
     for query in create_table_queries:
         cur.execute(query)
         conn.commit()
+        
 
-
+        
+        
 def main():
     """
     - Drops (if exists) and Creates the sparkify database. 
