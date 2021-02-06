@@ -6,8 +6,7 @@ The purpose of the database is to analyze the JSON metadata on songs and user ac
 
 List of files in the directory:
 
-![ER Diagram](PostGresDataModeling/images/ERDiag.png)
-Format: ![Alt Text](url)
+![ER Diagram](https://github.com/JaxT38/PostGresDataModeling/blob/main/Images/ERDiag.PNG)
 
 
 
