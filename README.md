@@ -4,7 +4,7 @@
 
 ### Introduction
 
-A startup called Sparkify wants to analyze the data they've been collecting on songs and user activity on their new music streaming app. The analytics team is particularly interested in understanding what songs users are listening to. Currently, they don't have an easy way to query their data, which resides in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app. 
+A startup called Sparkify wants to analyze the data they've been collecting on songs and user activity on their new music streaming app. The analytics team is particularly interested in understanding what songs users are listening to. Currently, they don't have an easy way to query their data, which resides in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.  
 
 ### Database Schema Design and ETL Process
 
@@ -15,6 +15,7 @@ Below is the schema design:
 Here are the tables and steps for the ETL process:
 
 #### Process song_data
+
     Use get_files to get the list of all JSON files in song/data
     
     1. songs table
@@ -34,8 +35,8 @@ Here are the tables and steps for the ETL process:
     
     ##### Insert Record into Artist Table
 
-
 #### Process log_data
+
     Use get_files to get the list of all JSON files in song/data
 
     3. time table
@@ -67,6 +68,7 @@ Here are the tables and steps for the ETL process:
     - Insert the songplay record by adding the results as a row
 
 ### Files in repo
+
     | File/Folder      | Description                                                                                      |
     |------------------|--------------------------------------------------------------------------------------------------|
     | Data             | top level folder for both song_files and log_files                                               |
@@ -77,5 +79,6 @@ Here are the tables and steps for the ETL process:
     | test.ipynb       | python notebook for testing etl.ipynb                                                            |
 
 ### Running the python scripts
+
 To run the python scripts, start with create_tables.py which creates the connection to the Sparkify database and connects to the sql_queries.py file that runs creates and drops tables, as well as inserting records. Next, run the etl.py file to finish the etl process.
 If testing, run create_tables.py, make modifications to the etl.ipynb, and test in test.ipynb after making changes.
