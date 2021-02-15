@@ -1,6 +1,0 @@
-   {
-      "client_id": "JaxT38",
-      "client_secret": "Temujin_35",
-      "redirect_uri": "http://JaxT38/PostGresDataModeling",
-      "callback_url": "http://JaxT38/PostGresDataModeling/oauth/github" // eg, http://dillinger.io/oauth/github
-    }
