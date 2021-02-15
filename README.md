@@ -14,35 +14,35 @@ Below is the schema design:
 
 Process song_data
 
-1.Use get_files to get the list of all JSON files in song/data
+1. Use get_files to get the list of all JSON files in song/data
 
 ### songs table
 
-2.Extract Data for Songs Table
+2. Extract Data for Songs Table
 
 - Select song ID, title, artist ID, year, and duration
 - Use df.values to select just the values from the dataframe
 - Convert array to list and set it to song_data
 
-3.Insert Record into Song Table
+3. Insert Record into Song Table
 
 ### artists table
 
-4.Extract Data for Artists Table
+4. Extract Data for Artists Table
 
 - Select artist ID, name, location, latitude, and longitude
 - Use df.values to select just the values for the dataframe
 - Convert the array to a list and set it to artist_data
 
-5.Insert Record into Artist Table
+5. Insert Record into Artist Table
 
 ### Process log_data
 
-6.Use get_files to get the list of all JSON files in song/data
+6. Use get_files to get the list of all JSON files in song/data
 
 ### time table
 
-7.Extract Data for Songs Table
+7. Extract Data for Songs Table
 
 - Filter records by NextSong action
 - Convert ts timestamp column to datetime
@@ -50,24 +50,24 @@ Process song_data
 - Specify labels for columns and set to column_labels
 - Create a dataframe combining columns_labels and time_data with column_labels as header for columns
 
-8.Insert Record into Song Table
+8. Insert Record into Song Table
 
 ### users table
 
-9.Extract Data for Artists Table
+9. Extract Data for Artists Table
 
 - Select user ID, first name, last name, gender, and level and set to user_df
 
-10.Insert Record into Artist Table
+10. Insert Record into Artist Table
 
 ### songplays Table
 
-11.Extract Data and Songplays Table
+11. Extract Data and Songplays Table
 
 - song_select query in sql_queries.py is used to find the song ID and artist ID based on title, artist name, and duration of a song
 - modify song_select query to select timestamp, user ID, level, song ID, artist ID, session ID, location, and user agent and set to songplay_data
 
-12.Insert Record into Artist Table
+12. Insert Record into Artist Table
 
 - Use df.iterrows() to get the song id and artist id from the song and artist tables
 - Use if else statement to pull in results
