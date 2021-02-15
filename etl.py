@@ -29,16 +29,15 @@ def process_log_file(cur, filepath):
     t = pd.to_datetime(df.ts, unit = 'ms')
     
     # insert time data records
-    ##time_data = pd.concat([t, t.dt.hour, t.dt.day, t.dt.week, t.dt.month, t.dt.year, t.dt.weekday], axis = 1)
+    """ Set time_data to a list with indices """
     time_data = {'start_time': df['ts'].values.tolist(), 'hour': t.dt.hour.values.tolist(), 'day': t.dt.day.values.tolist(), 'week': t.dt.week.tolist(),\
             'month': t.dt.month.values.tolist(), 'year': t.dt.year.values.tolist(), 'weekday': t.dt.weekday.values.tolist()}
-    ##time_data = {t, t.dt.hour, t.dt.day, t.dt.week, t.dt.month, t.dt.year, t.dt.weekday}
+    
+    """ Make a list of column headers and save as column_labels """
     column_labels = ['start_time','hour','day', 'week', 'month', 'year', 'weekday']
-    ##column_labels = {'start_time','hour','day', 'week', 'month', 'year', 'weekday'}
-    ##time_df = pd.DataFrame(time_data, columns=column_labels)
-    ##time_df = pd.DataFrame(dict(zip(column_labels, time_data)))
+    
+    """ Create a dataframe with column_labels as the column labels and time_data as the data """
     time_df = pd.DataFrame(time_data, columns=column_labels)
-    ##time_df = pd.Series((time_data), index=column_labels).to_dict()
     
     for i, row in time_df.iterrows():
         cur.execute(time_table_insert, list(row))
