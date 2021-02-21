@@ -16,8 +16,6 @@ Process song_data
 
 1. Use get_files to get the list of all JSON files in song/data
 
-### songs table
-
 2. Extract Data for Songs Table
 
 - Select song ID, title, artist ID, year, and duration
@@ -25,8 +23,6 @@ Process song_data
 - Convert array to list and set it to song_data
 
 3. Insert Record into Song Table
-
-### artists table
 
 4. Extract Data for Artists Table
 
@@ -36,11 +32,7 @@ Process song_data
 
 5. Insert Record into Artist Table
 
-### Process log_data
-
 6. Use get_files to get the list of all JSON files in song/data
-
-### time table
 
 7. Extract Data for Songs Table
 
@@ -52,15 +44,11 @@ Process song_data
 
 8. Insert Record into Song Table
 
-### users table
-
 9. Extract Data for Artists Table
 
 - Select user ID, first name, last name, gender, and level and set to user_df
 
 10. Insert Record into Artist Table
-
-### songplays Table
 
 11. Extract Data and Songplays Table
 
