@@ -12,8 +12,6 @@ Below is the schema design:
 
 ## ETL process
 
-Process song_data
-
 1. Use get_files to get the list of all JSON files in song/data
 
 2. Extract Data for Songs Table
